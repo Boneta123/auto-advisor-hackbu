@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-from data_files import data_extraction
+from data_files import loan_agreement_extraction
 
 app = Flask(__name__)
 
@@ -10,11 +10,11 @@ def home ():
 
 @app.route('/analyze')
 def analyze ():
-    make = data_extraction.make
-    model = data_extraction.model
-    year = data_extraction.year
-    loan_term = data_extraction.loan_term
-    interest_rate = data_extraction.loan_term
+    make = loan_agreement_extraction.make
+    model = loan_agreement_extraction.model
+    year = loan_agreement_extraction.year
+    loan_term = loan_agreement_extraction.loan_term
+    interest_rate = loan_agreement_extraction.loan_term
     return render_template('index.html', make=make, model=model, year=year, loan_term=loan_term, interest_rate=interest_rate)
 
 if __name__ == "__main__":
