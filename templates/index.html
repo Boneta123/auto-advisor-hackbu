@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="../static/default.css" />
     <link rel="stylesheet" href="../static/header.css" />
+    <link rel="stylesheet" href="../static/main.css" />
   </head>
   <body>
     <header class="header">
@@ -28,11 +29,15 @@
       </div>
     </header>
     <main>
-      <h2>Lets Get Started</h2>
-      <div>Step 1</div>
-      <div>Step 2</div>
-      <div>Step 3</div>
-      <form action="/analyze" enctype="multipart/form-data" type="POST">
+      <h2>Step 1</h2>
+      <h2>Step 2</h2>
+      <h2>Step 3</h2>
+      <form
+        class="full-input"
+        action="/analyze"
+        enctype="multipart/form-data"
+        type="POST"
+      >
         <!--Form for the two pdfs-->
         <label for="loan-agreement">Loan Agreement</label>
         <input
@@ -41,13 +46,12 @@
           name="loan-agreement"
           id="loan-agreement"
         />
-        <label for="purchase-agreement">Purchase Agreement</label>
-        <input
-          type="file"
-          accept="image/*"
-          name="purchase-agreement"
-          id="purchase-agreement"
-        />
+        <label for="purchase-price">Purchase Price</label>
+        <input name="purchase-price" type="number" id="purchase-price" />
+        <label for="age">Age</label>
+        <input name="age" type="number" id="age" />
+        <label for="credit-score">Credit score</label>
+        <input name="age" type="number" id="age" />
         <button type="submit">Submit</button>
         <h3>Your Data:</h3>
         <p>
