@@ -29,9 +29,7 @@
       </div>
     </header>
     <main>
-      <h2>Step 1</h2>
-      <h2>Step 2</h2>
-      <h2>Step 3</h2>
+      <h2></h2>
       <form
         class="full-input"
         action="/analyze"
@@ -39,27 +37,44 @@
         type="POST"
       >
         <!--Form for the two pdfs-->
-        <label for="loan-agreement">Loan Agreement</label>
-        <input
-          type="file"
-          accept="image/*"
-          name="loan-agreement"
-          id="loan-agreement"
-        />
-        <label for="purchase-price">Purchase Price</label>
-        <input name="purchase-price" type="number" id="purchase-price" />
-        <label for="age">Age</label>
-        <input name="age" type="number" id="age" />
-        <label for="credit-score">Credit score</label>
-        <input name="age" type="number" id="age" />
-        <button type="submit">Submit</button>
-        <h3>Your Data:</h3>
-        <p>
-          make: {{make}} model: {{model}} year: {{year}} loan term:
-          {{loan_term}} interest rate: {{interest_rate}}
-        </p>
+        <div class="loan-agreement-container">
+          <label for="loan-agreement">Loan Agreement</label>
+          <br />
+          <input
+            type="file"
+            accept="image/*"
+            name="loan-agreement"
+            id="loan-agreement"
+          />
+        </div>
+        <div class="purchase-price-container">
+          <label for="purchase-price">Purchase Price</label>
+          <br />
+          <input name="purchase-price" type="number" id="purchase-price" />
+        </div>
+        <div class="downpayment-container">
+          <label for="downpayment">Down Payment</label>
+          <br />
+          <input name="downpayment" type="number" id="downpayment" />
+        </div>
+        <div class="age-container">
+          <label for="age">Age</label>
+          <br />
+          <input name="age" type="number" id="age" />
+        </div>
+        <div class="credit-score-container">
+          <label for="credit-score">Credit score</label>
+          <br />
+          <input name="age" type="number" id="age" />
+        </div>
+        <button class="submit" type="submit">Submit</button>
         <!--Retuns the flask variables parsed from all the data-->
       </form>
+      <h3>Your Data:</h3>
+      <p>
+        make: {{make}} model: {{model}} year: {{year}} loan term: {{loan_term}}
+        interest rate: {{interest_rate}}
+      </p>
     </main>
   </body>
 </html>
