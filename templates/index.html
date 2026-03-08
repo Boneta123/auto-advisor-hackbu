@@ -29,9 +29,11 @@
       </div>
     </header>
     <main>
-      <h2>Step 1</h2>
-      <h2>Step 2</h2>
-      <h2>Step 3</h2>
+      <h2 class="intro">
+        <p class="intro-text">
+          Follow The Checkpoints To Getting Your interest
+        </p>
+      </h2>
       <form
         class="full-input"
         action="/analyze"
@@ -58,8 +60,65 @@
           make: {{make}} model: {{model}} year: {{year}} loan term:
           {{loan_term}} interest rate: {{their_interest_rate}} our interest rate: {{our_interest_rate}}
         </p>
+        <div class="loan-agreement-container">
+          <label for="loan-agreement"
+            >Loan Agreement
+            <br />
+            <input
+              class="input-loan-agreement"
+              type="file"
+              accept="image/*"
+              name="loan-agreement"
+              id="loan-agreement"
+            />
+          </label>
+        </div>
+        <div class="purchase-price-container">
+          <label for="purchase-price"
+            >Purchase Price
+            <br />
+            <input
+              name="purchase-price"
+              type="number"
+              id="purchase-price"
+              placeholder="input"
+            />
+          </label>
+        </div>
+        <div class="downpayment-container">
+          <label for="downpayment"
+            >Down Payment
+            <br />
+            <input
+              name="downpayment"
+              type="number"
+              id="downpayment"
+              placeholder="input"
+            />
+          </label>
+        </div>
+        <div class="age-container">
+          <label for="age"
+            >Age
+            <br />
+            <input name="age" type="number" id="age" placeholder="input" />
+          </label>
+        </div>
+        <div class="credit-score-container">
+          <label for="credit-score"
+            >Credit score
+            <br />
+            <input name="age" type="number" id="age" placeholder="input" />
+          </label>
+        </div>
+        <button class="submit" type="submit">Submit</button>
         <!--Retuns the flask variables parsed from all the data-->
       </form>
+      <h3>Your Data:</h3>
+      <p>
+        make: {{make}} model: {{model}} year: {{year}} loan term: {{loan_term}}
+        interest rate: {{interest_rate}}
+      </p>
     </main>
   </body>
 </html>
