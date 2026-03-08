@@ -36,7 +36,7 @@
         class="full-input"
         action="/analyze"
         enctype="multipart/form-data"
-        type="POST"
+        method="POST"
       >
         <!--Form for the two pdfs-->
         <label for="loan-agreement">Loan Agreement</label>
@@ -56,7 +56,7 @@
         <h3>Your Data:</h3>
         <p>
           make: {{make}} model: {{model}} year: {{year}} loan term:
-          {{loan_term}} interest rate: {{interest_rate}}
+          {{loan_term}} interest rate: {{their_interest_rate}} our interest rate: {{our_interest_rate}}
         </p>
         <!--Retuns the flask variables parsed from all the data-->
       </form>

@@ -31,9 +31,4 @@ def get_market_value(year, make, model, condition, value_type="Dealer Retail"):
     raise ValueError(f"{condition} condition not found in response.")
 
 
-# Example usage
-value = get_market_value(2022, "Tesla", "Model 3", "Rough")
-print("\nExtracted Market Value:", value)
-
-
 
